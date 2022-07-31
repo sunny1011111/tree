@@ -15,7 +15,6 @@ defineOptions({
 
 // 计算属性 计算一个样式来处理
 const props = defineProps(iconProps);
-console.log(props);
 
 const style = computed(() => {
   if (!props.size && !props.color) return {};

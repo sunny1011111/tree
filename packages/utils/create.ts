@@ -27,7 +27,7 @@ function _bem(prefixName: string, blockSuffix: string, element: string, modifile
 }
 
 function createBEM(prefixName: string) {
-  const b = (blockSuffix?: string) => (blockSuffix ? _bem(prefixName, blockSuffix, '', '') : '');
+  const b = (blockSuffix: string = '') => _bem(prefixName, blockSuffix, '', '');
   const e = (element: string) => (element ? _bem(prefixName, '', element, '') : '');
   const m = (modifiler: string) => (modifiler ? _bem(prefixName, '', '', modifiler) : '');
   const bm = (blockSuffix: string, modifiler: string) =>
